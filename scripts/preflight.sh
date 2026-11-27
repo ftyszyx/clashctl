@@ -568,25 +568,25 @@ download_zip() {
     mihomo_tag=${mihomo_tag##*-}
     case "$arch" in
     x86_64)
-        url_clash=https://github.com/nelvko/clashctl/releases/download/clash/clash-linux-amd64-2023.08.17.gz
+        url_clash=https://github.com/ftyszyx/clashctl/releases/download/clash/clash-linux-amd64-2023.08.17.gz
         url_mihomo=https://github.com/MetaCubeX/mihomo/releases/download/${mihomo_tag}/mihomo-linux-amd64-${level}-${mihomo_tag}.gz
         url_yq=https://github.com/mikefarah/yq/releases/download/${yq_tag}/yq_linux_amd64.tar.gz
         url_subconverter=https://github.com/${SUBCONVERTER_REPO}/releases/download/${subconverter_tag}/subconverter_linux64.tar.gz
         ;;
     *86*)
-        url_clash=https://github.com/nelvko/clashctl/releases/download/clash/clash-linux-386-2023.08.17.gz
+        url_clash=https://github.com/ftyszyx/clashctl/releases/download/clash/clash-linux-386-2023.08.17.gz
         url_mihomo=https://github.com/MetaCubeX/mihomo/releases/download/${mihomo_tag}/mihomo-linux-386-${mihomo_tag}.gz
         url_yq=https://github.com/mikefarah/yq/releases/download/${yq_tag}/yq_linux_386.tar.gz
         url_subconverter=https://github.com/${SUBCONVERTER_REPO}/releases/download/${subconverter_tag}/subconverter_linux32.tar.gz
         ;;
     armv*)
-        url_clash=https://github.com/nelvko/clashctl/releases/download/clash/clash-linux-armv5-2023.08.17.gz
+        url_clash=https://github.com/ftyszyx/clashctl/releases/download/clash/clash-linux-armv5-2023.08.17.gz
         url_mihomo=https://github.com/MetaCubeX/mihomo/releases/download/${mihomo_tag}/mihomo-linux-armv7-${mihomo_tag}.gz
         url_yq=https://github.com/mikefarah/yq/releases/download/${yq_tag}/yq_linux_arm.tar.gz
         url_subconverter=https://github.com/${SUBCONVERTER_REPO}/releases/download/${subconverter_tag}/subconverter_armv7.tar.gz
         ;;
     aarch64)
-        url_clash=https://github.com/nelvko/clashctl/releases/download/clash/clash-linux-arm64-2023.08.17.gz
+        url_clash=https://github.com/ftyszyx/clashctl/releases/download/clash/clash-linux-arm64-2023.08.17.gz
         url_mihomo=https://github.com/MetaCubeX/mihomo/releases/download/${mihomo_tag}/mihomo-linux-arm64-${mihomo_tag}.gz
         url_yq=https://github.com/mikefarah/yq/releases/download/${yq_tag}/yq_linux_arm64.tar.gz
         url_subconverter=https://github.com/${SUBCONVERTER_REPO}/releases/download/${subconverter_tag}/subconverter_aarch64.tar.gz

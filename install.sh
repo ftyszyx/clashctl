@@ -196,7 +196,7 @@ _install_bootstrap_archive() (
     archive=$(mktemp) || return 1
     entries="${archive}.list"
     trap 'rm -f -- "$archive" "$entries"' EXIT
-    url="https://github.com/nelvko/clashctl/archive/refs/heads/${branch}.tar.gz"
+    url="https://github.com/ftyszyx/clashctl/archive/refs/heads/${branch}.tar.gz"
     [ -z "$proxy" ] || url="${proxy%/}/$url"
     if command -v curl >/dev/null 2>&1; then
         curl -fsSL --connect-timeout 10 --max-time 180 --retry 2 -o "$archive" "$url" || return 1
@@ -243,7 +243,7 @@ _install_prepare_source() {
         _install_copy_local_source "$script_dir" "$destination" || return 1
     elif command -v git >/dev/null 2>&1; then
         method=git
-        url=https://github.com/nelvko/clashctl.git
+        url=https://github.com/ftyszyx/clashctl.git
         local -a clone_options=(--depth 1 --branch "$branch")
         [ "${_INSTALL_VERBOSE:-}" = 1 ] || clone_options+=(--quiet)
         [ -z "$proxy" ] || url="${proxy%/}/$url"
@@ -1091,7 +1091,7 @@ _install_main() {
   指定分支安装:
     bash install.sh --branch install-update --gh-proxy https://gh-proxy.org
 
-更多说明: https://github.com/nelvko/clashctl/wiki
+更多说明: https://github.com/ftyszyx/clashctl/wiki
 HELP
             exit 0 ;;
         *) printf '未知安装参数\n' >&2; exit 1 ;;

@@ -138,7 +138,7 @@ _source_archive() (
     archive=$(mktemp) || return 1
     entries="${archive}.list"
     trap 'rm -f -- "$archive" "$entries"' EXIT
-    url="https://github.com/nelvko/clashctl/archive/refs/heads/${branch}.tar.gz"
+    url="https://github.com/ftyszyx/clashctl/archive/refs/heads/${branch}.tar.gz"
     [ -z "$proxy" ] || url="${proxy%/}/$url"
     if command -v curl >/dev/null 2>&1; then
         curl -fsSL --connect-timeout 10 --max-time 180 --retry 2 -o "$archive" "$url" || return 1

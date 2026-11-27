@@ -8,56 +8,24 @@
 </p>
 
 <p align="center">
-  <a href="https://www.star-history.com/nelvko/clashctl">
+  <a href="https://www.star-history.com/ftyszyx/clashctl">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=nelvko/clashctl&type=rank&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=nelvko/clashctl&type=rank" />
-      <img alt="Star History Rank" src="https://api.star-history.com/badge?repo=nelvko/clashctl&type=rank" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=ftyszyx/clashctl&type=rank&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=ftyszyx/clashctl&type=rank" />
+      <img alt="Star History Rank" src="https://api.star-history.com/badge?repo=ftyszyx/clashctl&type=rank" />
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/nelvko/clashctl/actions/workflows/shell-tests.yml"><img alt="Shell tests" src="https://github.com/nelvko/clashctl/actions/workflows/shell-tests.yml/badge.svg" /></a>
+  <a href="https://github.com/ftyszyx/clashctl/actions/workflows/shell-tests.yml"><img alt="Shell tests" src="https://github.com/ftyszyx/clashctl/actions/workflows/shell-tests.yml/badge.svg" /></a>
   <img alt="Platform: Linux" src="https://img.shields.io/badge/platform-Linux-blue?logo=linux&amp;logoColor=white" />
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/nelvko/clashctl" /></a>
-  <img alt="Language: Shell" src="https://img.shields.io/github/languages/top/nelvko/clashctl" />
-  <a href="https://github.com/nelvko/clashctl/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nelvko/clashctl" /></a>
-  <a href="https://deepwiki.com/nelvko/clashctl"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/ftyszyx/clashctl" /></a>
+  <img alt="Language: Shell" src="https://img.shields.io/github/languages/top/ftyszyx/clashctl" />
+  <a href="https://github.com/ftyszyx/clashctl/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ftyszyx/clashctl" /></a>
+  <a href="https://deepwiki.com/ftyszyx/clashctl"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
-<table>
-  <tr>
-    <td width="180" align="center" valign="middle">
-      <a href="https://mtnapi.com/r/cvctl">
-        <img width="100" alt="千山算力" src="https://github.com/user-attachments/assets/6c2ca4ff-0fe7-4c14-a3ac-fe8225fa6c49" />
-      </a>
-    </td>
-    <td valign="middle">
-      <b><a href="https://mtnapi.com/r/cvctl">千山算力</a></b> 是一家稳定、低价的 AI 服务中转商，GPT 模型最低倍率 0.07x，支持最新生图模型 GPT 2.6，生图价格低至 0.05/张。每周四推出限时活动，不定期开展福利活动，每日签到领鸡蛋，支持开票。欢迎广大用户接入，<a href="https://mtnapi.com/register?aff=78G6G6YTQSP4">注册免费申请额度</a>。
-    </td>
-  </tr>
-  <tr>
-    <td width="180" align="center" valign="middle">
-      <a href="https://get.sushi3.cloud/#/home?code=aHno9F9G">
-        <img width="80" alt="寿司云" src="https://github.com/user-attachments/assets/ef609476-caf8-49bf-981d-651b2875a3a0" />
-      </a>
-    </td>
-    <td valign="middle">
-      <b><a href="https://get.sushi3.cloud/#/home?code=aHno9F9G">寿司云</a></b> 是 AI 用途优先的 VPN，着重优化 GPT、Claude、Gemini 等海外 AI 的使用体验，提供家宽节点和中国三网优化线路。<a href="https://get.sushi3.cloud/#/home?code=aHno9F9G">注册免费体验 1 天</a>。
-    </td>
-  </tr>
-  <tr>
-    <td width="180" align="center" valign="middle">
-      <a href="https://api.muteki.site/register?aff=nelvko&promo=nelvko">
-        <img width="180" alt="MaruCode" src="https://github.com/user-attachments/assets/48680ff3-ffbb-492b-82ec-5e85e9502e62" />
-      </a>
-    </td>
-    <td valign="middle">
-      <b><a href="https://api.muteki.site/register?aff=nelvko&promo=nelvko">MaruCode</a></b> 是一家偶尔做做慈善的小破站 API，自营号池，主要提供 Codex、Claude Code、GPT Image 等主流模型，支持 WebSocket 协议，明码标价（Codex 0.25x, CC 1.5x），透明汇率（1:1）<a href="https://images-2.muteki.site">生图工作台🖼️</a>
-    </td>
-  </tr>
-</table>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/471f3acb-faca-4610-a02e-5294e003301e" alt="preview" width="800" />
@@ -76,7 +44,7 @@
 
 ```bash
 GH_PROXY=https://gh-proxy.org/
-curl -fsSL "${GH_PROXY}https://raw.githubusercontent.com/nelvko/clashctl/HEAD/install.sh" | \
+curl -fsSL "${GH_PROXY}https://raw.githubusercontent.com/ftyszyx/clashctl/HEAD/install.sh" | \
   bash -s -- --gh-proxy "$GH_PROXY"
 ```
 
@@ -130,7 +98,7 @@ Global Options:
   -v, --version         显示版本信息
 ```
 
-使用示例与进阶配置，详见 [Wiki](https://github.com/nelvko/clashctl/wiki)。
+使用示例与进阶配置，详见 [Wiki](https://github.com/ftyszyx/clashctl/wiki)。
 
 ## 🔄 更新
 
@@ -156,16 +124,16 @@ bash "$CLASHCTL_HOME/uninstall.sh"
 
 ## 📖 文档
 
-- [Wiki](https://github.com/nelvko/clashctl/wiki)
-- [常见问题](https://github.com/nelvko/clashctl/wiki/FAQ)
+- [Wiki](https://github.com/ftyszyx/clashctl/wiki)
+- [常见问题](https://github.com/ftyszyx/clashctl/wiki/FAQ)
 
 ## ⭐ Star History
 
-<a href="https://www.star-history.com/?repos=nelvko%2Fclashctl&type=date&legend=top-left">
+<a href="https://www.star-history.com/?repos=ftyszyx%2Fclashctl&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=nelvko/clashctl&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=nelvko/clashctl&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=nelvko/clashctl&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ftyszyx/clashctl&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ftyszyx/clashctl&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ftyszyx/clashctl&type=date&legend=top-left" />
  </picture>
 </a>
 

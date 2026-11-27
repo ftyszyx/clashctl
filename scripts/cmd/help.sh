@@ -28,6 +28,6 @@ Global Options:
   -h, --help            显示帮助信息
   -v, --version         显示版本信息
 
-For more help on how to use clashctl, head to https://github.com/nelvko/clashctl
+For more help on how to use clashctl, head to https://github.com/ftyszyx/clashctl
 EOF
 }

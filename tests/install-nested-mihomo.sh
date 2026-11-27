@@ -127,7 +127,7 @@ args=()
 for arg in "$@"; do
     case $arg in
     fetch | clone) [ "${NESTED_FAIL_FETCH:-0}" = 0 ] || exit 51 ;;
-    *github.com/nelvko/clashctl.git | *github.com/nelvko/clash-for-linux-install.git) arg=$NESTED_SOURCE ;;
+    *github.com/ftyszyx/clashctl.git | *github.com/ftyszyx/clash-for-linux-install.git) arg=$NESTED_SOURCE ;;
     esac
     args+=("$arg")
 done
@@ -136,7 +136,7 @@ SH
 cat >"$WORK_DIR/bin/curl" <<'SH'
 #!/usr/bin/env bash
 case "$*" in
-*github.com/nelvko/*/archive/refs/heads/*)
+*github.com/ftyszyx/*/archive/refs/heads/*)
     destination=''
     while [ "$#" -gt 0 ]; do
         case $1 in -o) destination=$2; shift ;; esac
