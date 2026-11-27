@@ -6,18 +6,9 @@ declare -F _clashctl_run_in_bash >/dev/null 2>&1 || . "${BASH_SOURCE[0]%/*}/../l
 # mihomo 只认这三种路由模式。
 _MODE_VALUES='rule global direct'
 
-# 优先读运行时配置（已生效），回退到 Mixin（尚未合并），最后按 mihomo 默认值。
-_mode_current() {
-    local mode
-    mode=$("$BIN_YQ" '.mode // ""' "$CLASH_CONFIG_RUNTIME" 2>/dev/null) || mode=''
-    [ -n "$mode" ] || mode=$("$BIN_YQ" '.mode // ""' "$CLASH_CONFIG_MIXIN" 2>/dev/null) || mode=''
-    [ -n "$mode" ] || mode=rule
-    printf '%s\n' "$mode"
-}
-
-# 通过控制器即时切换，避免为改一个字段重启内核、中断现有连接。
-_mode_api_apply() (
-    local mode=$1 controller port host secret
+# 控制器地址归一化：通配/回环地址与实际监听地址对齐。
+_mode_controller_host_port() {
+    local controller port host
     controller=$("$BIN_YQ" '.external-controller // ""' "$CLASH_CONFIG_RUNTIME" 2>/dev/null) || return 1
     port=${controller##*:}
     case $port in '' | *[!0-9]*) return 1 ;; esac
@@ -27,6 +18,36 @@ _mode_api_apply() (
     '[::]' | ::) host='[::1]' ;;
     *:*) [[ $host == \[* ]] || host="[$host]" ;;
     esac
+    printf '%s %s\n' "$host" "$port"
+}
+
+# 内核运行时以控制器为准（API 切换不回写配置文件），否则读配置，最后按默认值。
+_mode_current() {
+    local mode host port secret
+    if service_is_active >&/dev/null &&
+        read -r host port < <(_mode_controller_host_port) &&
+        secret=$(_get_secret); then
+        mode=$(curl --silent --fail --noproxy '*' --connect-timeout 1 --max-time 2 \
+            -H "Authorization: Bearer $secret" "http://$host:$port/configs" 2>/dev/null |
+            "$BIN_YQ" -p json '.mode // ""' 2>/dev/null) || mode=''
+        mode=${mode,,}
+        case $mode in
+        rule | global | direct)
+            printf '%s\n' "$mode"
+            return 0
+            ;;
+        esac
+    fi
+    mode=$("$BIN_YQ" '.mode // ""' "$CLASH_CONFIG_RUNTIME" 2>/dev/null) || mode=''
+    [ -n "$mode" ] || mode=$("$BIN_YQ" '.mode // ""' "$CLASH_CONFIG_MIXIN" 2>/dev/null) || mode=''
+    [ -n "$mode" ] || mode=rule
+    printf '%s\n' "${mode,,}"
+}
+
+# 通过控制器即时切换，避免为改一个字段重启内核、中断现有连接。
+_mode_api_apply() (
+    local mode=$1 host port secret
+    read -r host port < <(_mode_controller_host_port) || return 1
     secret=$(_get_secret) || return 1
     curl --silent --fail --noproxy '*' --connect-timeout 1 --max-time 2 \
         -X PATCH \
