@@ -44,7 +44,7 @@
 
 ```bash
 GH_PROXY=https://gh-proxy.org/
-curl -fsSL "${GH_PROXY}https://raw.githubusercontent.com/ftyszyx/clashctl/HEAD/install.sh" | \
+curl -fsSL "${GH_PROXY}https://raw.githubusercontent.com/ftyszyx/clashctl/master/install.sh" | \
   bash -s -- --gh-proxy "$GH_PROXY"
 ```
 
